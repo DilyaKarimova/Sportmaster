@@ -23,7 +23,3 @@
 /dist/
 /nbdist/
 /.nb-gradle/
-
-git rm -r one-of-the-directories
-git commit -m "Remove .idea"
-git push origin <your-git-branch> (typically 'master', but not always)
