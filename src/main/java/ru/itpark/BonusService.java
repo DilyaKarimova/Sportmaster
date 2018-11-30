@@ -13,19 +13,18 @@ public class BonusService{
 
 
             if (totalAmount >= blueCardLowerBound && totalAmount <= blueCardUpperBound) {
-                int blueCard = (int) (purchaseAmount / 1000) * blueCardBonus;
+                int blueCard =  (purchaseAmount / 1_000) * blueCardBonus;
                 result = result + blueCard;
 
             } else if (totalAmount >= silverCardLowerBound && totalAmount <= silverCardUpperBound) {
-                int silverCard = (int) (purchaseAmount / 1000) * silverCardBonus;
+                int silverCard = (purchaseAmount / 1_000) * silverCardBonus;
                 result = result + silverCard;
 
             } else {
-                int goldCard = (int) (purchaseAmount / 1000) * goldCardBonus;
+                int goldCard = (purchaseAmount / 1_000) * goldCardBonus;
                 result = result + goldCard;
 
             }
-            totalAmount = totalAmount + purchaseAmount;
 
 
             return result;

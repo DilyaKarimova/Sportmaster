@@ -1,26 +1,28 @@
 import org.junit.jupiter.api.Test;
 import ru.itpark.BonusService;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class BonusServiceTest {
 
     @Test
     void calculateBonus() {
         {
             BonusService bonusService = new BonusService();
-            int b = bonusService.calculateBonus(1000, 1);
-            System.out.println(b);
+            int bonus = bonusService.calculateBonus(1_000, 1);
+            assertEquals(50, bonus);
         }
 
         {
             BonusService bonusService = new BonusService();
-            int b = bonusService.calculateBonus(1000, 16000);
-            System.out.println(b);
+            int bonus = bonusService.calculateBonus(1_000, 16_000);
+            assertEquals(70, bonus);
         }
 
         {
             BonusService bonusService = new BonusService();
-            int b = bonusService.calculateBonus(1000, 160000);
-            System.out.println(b);
+            int bonus = bonusService.calculateBonus(1_000, 160_000);
+            assertEquals(100, bonus);
         }
     }
 }
